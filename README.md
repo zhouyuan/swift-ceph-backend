@@ -18,3 +18,4 @@ Installation
         [DEFAULT]
         rados_user = swift
         rados_pool = swift
+        rados_ceph_conf = /etc/ceph/ceph.conf

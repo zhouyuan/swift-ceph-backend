@@ -102,7 +102,9 @@ class RadosFileSystem(object):
 
         def write(self, obj, offset, data):
             try:
-                return self._ioctx.write(obj, data, offset)
+                #return self._ioctx.write(obj, data, offset)
+                self._ioctx.write(obj, data, offset)
+                return len(data)
             except self._fs.RADOS.NoSpace:
                 raise DiskFileNoSpace()
             except Exception:
