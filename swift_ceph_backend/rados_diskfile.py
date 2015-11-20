@@ -167,6 +167,9 @@ class DiskFileWriter(object):
         metadata['name'] = self._name
         self._fs.put_object(self._name, metadata)
 
+    def commit(self, timestamp):
+        pass
+
 
 class DiskFileReader(object):
     """
